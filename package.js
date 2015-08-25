@@ -22,7 +22,7 @@ Package.onUse(function(api) {
   api.use('check');
   api.use('http');
   api.use('reactive-var');
-  api.use('fortawesome:fontawesome')
+  api.use('fortawesome:fontawesome@4.4.0')
 
   api.export("TMDBSearch")
   api.export("tmdbSearchForm");
