@@ -4,7 +4,7 @@ A package that allows you to search [TheMovieDB](https://www.themoviedb.org/), s
 
 ## Features
 - Search form for searching TheMovieDB
-- Returns Movies and TV shows side by side
+- Choose to search either Movies or TV Shows
 
 ## Installation
 
@@ -24,7 +24,7 @@ If you would like to change the language, you can set it on the server as well. 
       TMDBSearch.language = "nl"
     }
 
-Insert the search form template where appropriate on the client side. A [Bootstrap](http://getbootstrap.com/) themed search bar will be provided, as well as two columns of results. No submit button is provided, results are generated as the user types (minimum 3 characters required).
+Insert the search form template where appropriate on the client side. A [Bootstrap](http://getbootstrap.com/) themed search bar will be provided. No submit button is provided, results are generated as the user types (minimum 3 characters required).
 
     {{> tmdbSearchForm}}
 

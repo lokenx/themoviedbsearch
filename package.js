@@ -1,6 +1,6 @@
 Package.describe({
   name: 'lokenx:themoviedbsearch',
-  version: '0.0.5',
+  version: '0.1.0',
   summary: 'A package that allows you to search TheMovieDB',
   git: 'https://github.com/lokenx/themoviedbsearch',
   documentation: 'README.md'
@@ -10,11 +10,9 @@ Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
 
   api.addFiles('lib/client/views/tmdbSearchForm.html',['client']);
-  api.addFiles('lib/client/views/movieItem.html',['client']);
-  api.addFiles('lib/client/views/tvItem.html',['client']);
+  api.addFiles('lib/client/views/item.html',['client']);
   api.addFiles('lib/client/controllers/tmdbSearchForm.js', ['client']);
-  api.addFiles('lib/client/controllers/tvItem.js', ['client']);
-  api.addFiles('lib/client/controllers/movieItem.js', ['client']);
+  api.addFiles('lib/client/controllers/item.js', ['client']);
   api.addFiles('lib/server/methods/search.js', 'server');
 
   api.use('templating');

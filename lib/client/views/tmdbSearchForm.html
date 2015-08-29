@@ -1,27 +1,33 @@
 <template name="tmdbSearchForm">
   <div class="row">
-    <form id="tmdb-form" class="col-sm-6">
-      <div class="form-group has-feedback">
-        <input class="form-control" type="search" id="tmdb-search" placeholder="Search" required>
-        {{#if searching}}<i class="fa fa-spinner fa-spin form-control-feedback"></i>{{/if}}
-      </div>
-    </form>
-  </div>
+      <form class="form-inline">
+        <div class="input-group col-xs-12">
+          <div class="input-group-addon">
+            {{#if searching}}
+              <i class="fa fa-search fa-pulse"></i>
+            {{else}}
+              <i class="fa fa-search"></i>
+            {{/if}}
+          </div>
+          <input type="search" class="form-control" id="tmdb-search" placeholder="Search">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="type-select-button">Movies <span class="caret"></span></button>
+            <ul class="dropdown-menu type-select">
+              <li><a href="#">Movies</a></li>
+              <li><a href="#">TV Shows</a></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  <br>
   <div class="row">
     {{#unless noResults}}
-    <div id="tmdb-movie-results" class="col-sm-6">
-      <h3 class="results-header" style="display:none;">Movies</h3>
-      <div class="panel-group" id="accordion0" role="tablist" aria-multiselectable="true">
-        {{#each movieSearchResults}}
-          {{> movieItem}}
-        {{/each}}
-      </div>
-    </div>
-    <div id="tmdb-tv-results" class="col-sm-6">
-      <h3 class="results-header" style="display:none;">TV Shows</h3>
-      <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
-        {{#each tvSearchResults}}
-          {{> tvItem}}
+    <div id="tmdb-results">
+      <h3 class="results-header" style="display:none;">{{searchType}}</h3>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        {{#each results}}
+          {{> item}}
         {{/each}}
       </div>
     </div>
