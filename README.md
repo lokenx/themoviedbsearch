@@ -18,6 +18,12 @@ Include your TheMovieDB API Key somewhere in your server-side code.
       TMDBSearch.api = "abcdef0123456789"
     }
 
+If you would like to change the language, you can set it on the server as well. Acceptable values are ISO 639-1 codes.
+
+    if(Meteor.isServer){
+      TMDBSearch.language = "nl"
+    }
+
 Insert the search form template where appropriate on the client side. A [Bootstrap](http://getbootstrap.com/) themed search bar will be provided, as well as two columns of results. No submit button is provided, results are generated as the user types (minimum 3 characters required).
 
     {{> tmdbSearchForm}}
