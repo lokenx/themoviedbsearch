@@ -36,6 +36,10 @@ To get the details of the item that gets requested, a simple Template event hand
       }
     })
 
+If you would like to get the IMDB or TVDB id numbers for movies or tv shows respectively, you can use the below method. Variable *id* is a TheMovieDB id number, and *type* is a string, either `movie` or `tv`.
+
+    TMDBSearch.externalIds(id, type);
+
 ## License
 
 This application is licensed under The MIT License. The Movie Database name and related details are copyright of Fanhattan Inc.
