@@ -1,6 +1,6 @@
 Package.describe({
   name: 'lokenx:themoviedbsearch',
-  version: '0.4.1',
+  version: '0.4.7',
   summary: 'A package that allows you to search TheMovieDB',
   git: 'https://github.com/lokenx/themoviedbsearch',
   documentation: 'README.md'
@@ -11,6 +11,8 @@ Package.onUse(function(api) {
 
   api.addFiles('lib/server/methods/search.js', ['server']);
   api.addFiles('lib/server/methods/externalIds.js', ['server']);
+  api.addFiles('lib/server/methods/movie.js', ['server']);
+  api.addFiles('lib/server/methods/tv.js', ['server']);
 
   api.use('meteor-base@1.0.1')
   api.use('templating');
