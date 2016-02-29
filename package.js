@@ -1,6 +1,6 @@
 Package.describe({
   name: 'lokenx:themoviedbsearch',
-  version: '0.4.7',
+  version: '0.4.8',
   summary: 'A package that allows you to search TheMovieDB',
   git: 'https://github.com/lokenx/themoviedbsearch',
   documentation: 'README.md'
